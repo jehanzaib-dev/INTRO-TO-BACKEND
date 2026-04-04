@@ -1,0 +1,26 @@
+{
+  "name": "intro-to-backend",
+  "version": "1.0.0",
+  "description": "a learning project",
+  "homepage": "https://github.com/jehanzaib-dev/INTRO-TO-BACKEND#readme",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/jehanzaib-dev/INTRO-TO-BACKEND/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jehanzaib-dev/INTRO-TO-BACKEND.git"
+  },
+  "license": "ISC",
+  "author": "Jehanzaib",
+  "main": "index.js",
+  "scripts": {
+    "start":"node backend/src/index.js",
+    "dev":"nodemon backend/src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.0",
+    "express": "^5.2.1",
+    "mongoose": "^9.4.1"
+  }
+}
