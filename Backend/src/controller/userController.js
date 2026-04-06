@@ -54,6 +54,19 @@ const loginUser=async(req, res)=>{
     }
 };
 
+const logoutUser=async(req, res)=>{
+    try{
+        const {email}=req.body;
+        const user=UserModel.findOne({email});
+        if(!user) return res.status(404).json({message:"user not found"});
+        return res.status(200).json({message:"user logged out successfully"});
+    }
+    catch(err){
+         console.log("ERROR Occured:", err);
+         res.status(500).json({ message: err.message });
+    }
+}
+
 export {
-    registerUser, loginUser
+    registerUser, loginUser, logoutUser
 }
