@@ -59,7 +59,7 @@ const logoutUser=async(req, res)=>{
         const {email}=req.body;
         const user=UserModel.findOne({email});
         if(!user) return res.status(404).json({message:"user not found"});
-        return res.status(200).json({message:"user logged out successfully"});
+        res.status(200).json({message:"user logged out successfully"});
     }
     catch(err){
          console.log("ERROR Occured:", err);
